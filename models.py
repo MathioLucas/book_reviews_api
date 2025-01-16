@@ -8,3 +8,10 @@ class book(BaseModel):
   Author: str
   Publication_date: datetime
   
+class book_review(BaseModel):
+  id = Optional[str]
+  book_id: int
+  reviewer: str
+  rating: int
+  comments: Optional[str]
+  review_date: datetime
