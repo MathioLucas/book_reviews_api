@@ -5,10 +5,10 @@ from bson import ObjectId
 
 def book_helper(book) - > dict:
   return {
-    "id": str(book["_id"]),
-    "title"
-    "author"
-    "
+    "Id": str(book["_id"]),
+    "Title": book["Title"]
+    "Author": book["Author"]
+    "Publication_date": book["Publication_date"]
 
 
 
