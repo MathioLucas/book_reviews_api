@@ -6,7 +6,7 @@ client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 
 database = client.book_review
 
-book_collection = database.get_collection("books")
+book_collection = database.get_collection("book")
 
 review_collection = database.get_collectoin("book_review")
 
