@@ -8,6 +8,13 @@ app = FastAPI
 
 logging.basicConfig(level=logging.INFO)
 
+@app.post("/books", response_model = book
+
+async def create_book(book: Book):
+  book_dict = Book.dict()
+  new_book = await add_book(book_dict)
+  return new_book
+
 
 @app.get("/")
 
