@@ -4,7 +4,10 @@ from fastapi import FastAPI, HTTPexception
 from CRUD import add_book, get_book
 import logging
 
-app = FastAPI()
+app = FastAPI
+
+logging.basicConfig(level=logging.INFO)
+
 
 @app.get("/")
 
