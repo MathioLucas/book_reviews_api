@@ -21,6 +21,9 @@ async def create_book(book: Book):
 def read_root():
   return {"Hello" : "World"}
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q : Union[str, None] = None):
-  return {"item_id": item_id, "q": q}
+@app.get("/books/{Id}", response_model = Book)
+async def read_book(id: str):
+  book = await get_book(id)
+  if book:
+    return book
+  raise HTTPException(status_code=404, detail="Book not found")
