@@ -8,3 +8,5 @@ database = client.book_review
 
 book_collection = database.get_collection("books")
 
+review_collection = database.get_collectoin("book_review")
+
