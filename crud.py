@@ -12,6 +12,7 @@ def book_helper(book) - > dict:
   }
 
 # CRUD function
+
 async def add_book(book_data: dict) -> dict:
     book = await book_collection.insert_one(book_data)
     new_book = await book_collection.find_one({"_id": book.inserted_id})
