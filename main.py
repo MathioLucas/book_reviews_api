@@ -26,4 +26,5 @@ async def read_book(id: str):
   book = await get_book(id)
   if book:
     return book
+    
   raise HTTPException(status_code=404, detail="Book not found")
